@@ -15,7 +15,6 @@ def user_input(options, choices, text_output):
 	error_text = "\nI have no clue what you've just said\n"
 	#print "xxxxx" + option_1
 	while jet != True:
-		print "xxxxx" + answer 
 		answer = raw_input([choices])
 		answer = answer.lower()
 		if answer == option_1:
@@ -24,8 +23,7 @@ def user_input(options, choices, text_output):
 			jet = True
 		if jet != True:#answer != option_1: #use loop here to account for unlimited opitons
 			print error_text
-		print "xxxx" + answer
-		
+
 	print "function exit"
 	return answer	
 	
@@ -33,11 +31,22 @@ def user_input(options, choices, text_output):
 #intro
 print text_intro["ti0"]
 answer = user_input(options_chapter_intro, choices_chapter_intro["ci0"], None)
+print "xxxxxxx"
+print answer
 while answer != options_chapter_intro["option_1"]:
-	print text_intro["ti1"]
-	user_input(options_chapter_intro, choices_chapter_intro["ci0"], None)
-	if answer != options_chapter_intro["option_1"]:
-		answer = None
+	answer = user_input(options_chapter_intro, choices_chapter_intro["ci0"], None)
+	if answer == options_chapter_intro["option_2"]:
+		print text_intro["ti1"]
+	if answer == options_chapter_intro["option_1"]:
+		print "you picked up the note."		
+
+
+#while answer != options_chapter_intro["option_1"]:
+	#print "xxxxxx" + answer
+	#print text_intro["ti1"]
+	#user_input(options_chapter_intro, choices_chapter_intro["ci0"], None)
+	#if answer != options_chapter_intro["option_1"]:
+		#answer = None
 
 
 
